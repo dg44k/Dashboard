@@ -1,7 +1,62 @@
 @import url(./reset.css);
 
 :root{
-  --bacic-color: #38bdf8;
+  --bacic-color: #0ea5e9;
   --secondary-color: #fde047;
+  font-family: 'Barlow', sans-serif;
+  font-size: 62.5%;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sidebar, header{
+  padding: 10px;
+}
+.sidebar{
+  grid-column: 1/2;
+  
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: var(--bacic-color);
+}
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  gap: 10px;
+
+  cursor: pointer;
+}
+.logo img{
+  width: 2em;
+}
+.menu{
+  margin-top: 40px;
+  margin-left: 15px;
+}
+.menu-nav, .menu-settings{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu-nav div, .menu-settings div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.menu-nav img, .menu-settings img{
+  width: 1.5em;
+}
+.menu-settings{
+  margin-top: 50px;
+}
+
+header{
+  grid-column: 2/5;
+}
